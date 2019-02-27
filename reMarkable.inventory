@@ -1,5 +1,5 @@
 [reMarkables]
-remarkable ansible_python_interpreter=/opt/bin/python
+reMarkable ansible_python_interpreter=/opt/bin/python
 
 [Localhosts]
 localhost ansible_connection=local

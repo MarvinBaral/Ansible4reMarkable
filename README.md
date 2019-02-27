@@ -37,4 +37,4 @@ TODO: here will be added a collection of tasks to install the best features from
 ### Uninteresting Helper Tasks:
 
 - "entware" - a task to complete the entware installation
-- "ssh_local" - adds 10.11.99.1 as "remarkable" in your ssh config - now you can just type "ssh remarkable" to reach it
+- "ssh_local" - adds 10.11.99.1 as "reMarkable" in your ssh config - now you can just type "ssh reMarkable" to reach it
