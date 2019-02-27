@@ -11,6 +11,7 @@ The Ansible tasks will rely on other packages from the entware package manager t
 - (For extra fun install cowsay from package manager)
 - You need a rsa publickey in ~/.ssh/id_rsa.pub on your PC (run ssh-keygen if you don't have them)
 - Activate WLAN on your reMarkable and make sure it has a good connection!
+- Connect your reMarkable via USB to your PC
 
 ## Setup:
 ```
