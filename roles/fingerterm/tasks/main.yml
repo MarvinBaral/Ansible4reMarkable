@@ -1,0 +1,12 @@
+---
+  #https://github.com/dixonary/fingerterm-reMarkable
+- name: copy fingerterm binary
+  copy: src=fingerterm dest=/usr/bin/fingerterm owner=root group=root mode=755
+
+- name: copy fingerterm config for draft launcher
+  copy: src=02-fingerterm dest=/etc/draft/02-fingerterm
+
+- name: copy fingerterm icon for draft launcher
+  copy: src=fingerterm.png dest=/etc/draft/icons/fingerterm.png
+
+#settings are in /home/root/.config/FingerTerm/settings.ini

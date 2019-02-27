@@ -1,0 +1,20 @@
+---
+  #https://github.com/dixonary/draft-reMarkable deployed it to reMarkable, copied binary
+- name: copy draft binary
+  copy: src=draft dest=/usr/bin/draft owner=root group=root mode=755
+
+  #https://github.com/dixonary/button-capture-reMarkable compiled it, copied binary
+- name: copy button-capture binary
+  copy: src=button-capture dest=/usr/bin/button-capture owner=root group=root mode=755
+
+- name: copy draft config
+  copy: src=etc/draft/ dest=/etc/draft/
+
+- name: copy draft service
+  copy: src=draft.service dest=/lib/systemd/system/draft.service
+
+- name: disable xochitl
+  systemd: name=xochitl enabled=no
+
+- name: enable draft
+  systemd: name=draft enabled=yes

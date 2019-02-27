@@ -29,12 +29,16 @@ ansible-playbook site.reMarkable.yml --diff --tags basic        #specify certain
 ```
 ## Currently implemented tasks (selectable by --tags):
 
-- "basic" - installs some basic packages one might want when being in the reMarkable commandline (currently: python, nano, git, htop, lsblk, lscpu).
+- `basic` - installs some basic packages one might want when being in the reMarkable commandline (currently: python, nano, git, htop, lsblk, lscpu).
   You can edit them in roles/basic/tasks/main.yml
 
-TODO: here will be added a collection of tasks to install the best features from https://github.com/reHackable/awesome-reMarkable and other reMarkable repos
+- `draft` - the one launcher for reMarkable https://github.com/dixonary/draft-reMarkable together with its extension `button-capture` (precompiled binaries)
+
+- `fingerterm` - a terminal which is usable by the reMarkables touchscreen, requires `draft` https://github.com/dixonary/fingerterm-reMarkable (precompiled binaries)
+
+- TODO: more tasks are to be implemented: Some from https://github.com/reHackable/awesome-reMarkable and other reMarkable repos
 
 ### Uninteresting Helper Tasks:
 
-- "entware" - a task to complete the entware installation
-- "ssh_local" - adds 10.11.99.1 as "reMarkable" in your ssh config - now you can just type "ssh reMarkable" to reach it
+- `entware` - a task to complete the entware installation
+- `ssh_local` - adds 10.11.99.1 as "reMarkable" in your ssh config - now you can just type "ssh reMarkable" to reach it

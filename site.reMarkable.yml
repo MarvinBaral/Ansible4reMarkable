@@ -6,3 +6,5 @@
   roles:
     - { role: basic, tags: [ 'basic' ] }
     - { role: entware, tags: [ 'entware' ] }
+    - { role: draft, tags: [ 'draft' ] }
+    - { role: fingerterm, tags: [ 'fingerterm' ] }
