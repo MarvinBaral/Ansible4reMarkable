@@ -1,0 +1,5 @@
+---
+- name: add entware path to PATH
+  lineinfile:
+    path: "/home/root/.bashrc"
+    line: "PATH=$PATH:/opt/bin:/opt/sbin"

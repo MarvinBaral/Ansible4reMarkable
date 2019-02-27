@@ -1,0 +1,8 @@
+- hosts: Localhosts
+  roles:
+    - { role: ssh_local, tags: [ 'ssh_local'] }
+
+- hosts: reMarkables
+  roles:
+    - { role: basic, tags: [ 'basic' ] }
+    - { role: entware, tags: [ 'entware' ] }
