@@ -1,0 +1,12 @@
+- hosts: Localhosts
+  roles:
+    - { role: remove_ssh_local, tags: [ 'remove_ssh_local'] }
+
+- hosts: reMarkables
+  roles:
+    - { role: remove_basic, tags: [ 'remove_basic' ] }
+    - { role: remove_entware, tags: [ 'remove_entware' ] }
+    - { role: remove_draft, tags: [ 'remove_draft' ] }
+    - { role: remove_fingerterm, tags: [ 'remove_fingerterm' ] }
+
+#order may be important

@@ -4,6 +4,7 @@
 
 #make sure that your reMarkable has WLAN!
 
+ansible-playbook site.remove.yml --tags=remove_entware
 ssh root@10.11.99.1 systemctl disable opt.mount
 ssh root@10.11.99.1 systemctl stop opt.mount
 ssh root@10.11.99.1 rm /home/root/entware_install.sh

@@ -1,0 +1,14 @@
+---
+- name: disable draft
+  systemd: name=draft enabled=no
+
+- name: enable xochitl
+  systemd: name=xochitl enabled=yes
+
+- name: remove draft files
+  file: path={{ item }} state=absent
+  with_items:
+    - /usr/bin/draft
+    - /usr/bin/button-capture
+    - /etc/draft
+    - /lib/systemd/system/draft.service

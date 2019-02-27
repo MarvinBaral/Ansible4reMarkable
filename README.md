@@ -21,13 +21,15 @@ You will be asked for your ssh password
 
 ## Usage:
 ```
-ansible-playbook site.reMarkable.yml                           #just run it, install everything without looking
+ansible-playbook site.reMarkable.yml                            #just run it, install everything without looking
 ansible-playbook site.reMarkable.yml --diff                     #show things that have been changed
 ansible-playbook site.reMarkable.yml --diff --check             #dry-run to find things that will be changed
-ansible-playbook site.reMarkable.yml --diff --limit reMarkables #limit execution to certain hosts
-ansible-playbook site.reMarkable.yml --diff --tags basic        #specify certain tasks to be executed
+ansible-playbook site.reMarkable.yml --diff --limit=reMarkables #limit execution to certain hosts
+ansible-playbook site.reMarkable.yml --diff --tags=basic,draft  #specify certain roles to be executed
 ```
-## Currently implemented tasks (selectable by --tags):
+There is a `remove_*` role for every role in the site.remove.yml playbook.
+
+## Currently implemented roles (selectable by --tags):
 
 - `basic` - installs some basic packages one might want when being in the reMarkable commandline (currently: python, nano, git, htop, lsblk, lscpu).
   You can edit them in roles/basic/tasks/main.yml
@@ -42,3 +44,10 @@ ansible-playbook site.reMarkable.yml --diff --tags basic        #specify certain
 
 - `entware` - a task to complete the entware installation
 - `ssh_local` - adds 10.11.99.1 as "reMarkable" in your ssh config - now you can just type "ssh reMarkable" to reach it
+
+## Remove:
+If you don't like this at all you can just type
+```
+./remove_everything
+```
+and it would be as if nothing happened. Every single change will be reverted.

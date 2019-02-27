@@ -1,0 +1,11 @@
+---
+- name: remove packages
+  command: "/opt/bin/opkg remove {{ item }}"
+  register: command_result
+  changed_when: command_result.stdout is not search("No packages removed.")
+  with_items:
+    - nano
+    - git
+    - htop
+    - lsblk
+    - lscpu

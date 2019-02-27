@@ -4,9 +4,9 @@
   register: command_result
   changed_when: command_result.stdout is not search("is up to date.")
   with_items:
-    - python #will already be installed
     - nano
     - git
     - htop
     - lsblk
     - lscpu
+#python is already installed by setup_entware.sh

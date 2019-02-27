@@ -1,0 +1,8 @@
+---
+- name: remove fingerterm files
+  file: path={{ item }} state=absent
+  with_items:
+    - /usr/bin/fingerterm
+    - /etc/draft/02-fingerterm
+    - /etc/draft/icons/fingerterm.png
+    - /home/root/.config/FingerTerm

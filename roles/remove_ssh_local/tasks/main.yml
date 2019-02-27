@@ -1,0 +1,10 @@
+---
+  - name: add reMarkable to ssh config
+    blockinfile:
+      marker: "### {mark} reMarkable entry by Ansible ###"
+      path: ~/.ssh/config
+      state: absent
+      block: |
+        Host reMarkable
+          User root
+          Hostname 10.11.99.1
